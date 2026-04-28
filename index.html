@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>✨ LAB 4 A! ✨</title>
+
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive;
+            background: linear-gradient(to bottom right, #ffd6e7, #ffeef7);
+            padding: 30px;
+            color: #ff4f81;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff2e74;
+        }
+
+        section {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+        }
+
+        h3 {
+            color: #ff69b4;
+        }
+
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff2e74;
+            transform: scale(1.05);
+        }
+
+        input {
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 12px;
+            outline: none;
+        }
+
+        #demo {
+            background: #fff0f5;
+            padding: 15px;
+            border-radius: 15px;
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎀 LAB 4 A! 🎀</h1>
+
+    <section>
+        <h3>🌸 Change Content</h3>
+
+        <div id="myElement">
+            <p id="welcomeText">Welcome to my website! 💖</p>
+        </div>
+
+        <button onclick="toggleText()">
+            Click Me ✨
+        </button>
+    </section>
+
+    <script>    function toggleText() {       
+         let text = document.getElementById("welcomeText");        
+         if (text.innerHTML === "Welcome to my website! 💖") {            
+            text.innerHTML = "Hello there! 💕";       
+         }                
+             else {            
+                text.innerHTML = "Welcome to my website! 💖";      
+                  }  
+                    }
+    </script>
+
+    <section>
+        <h3>🧁 Number Validation</h3>
+
+        <input type="text" id="userInput" placeholder="Enter a number 💕">
+
+        <button onclick="checkInput()">
+            Check Number 🌷
+        </button>
+    </section>
+
+    <section>
+        <h3>🐰 Loop Output</h3>
+
+        <p id="demo"></p>
+    </section>
+
+    <script>
+
+        // Task 1
+        function toggleText() {
+            document.getElementById("welcomeText").innerHTML =
+                "Hello there! 💖✨";
+        }
+
+        // Task 2
+        function checkInput() {
+
+            let x = Number(document.getElementById("userInput").value);
+
+            if (isNaN(x)) {
+                alert("❌ Please insert a number!");
+            }
+
+            else if (x < 10) {
+                alert("🌸 The number is lower than 10!");
+            }
+
+            else {
+                alert("✨ The number is higher than 10!");
+            }
+        }
+
+        // Task 3
+        let text = "";
+
+        for (let i = 1; i <= 5; i++) {
+            text += "🎀 The number is " + i + "<br>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+
+</body>
+</html>
