@@ -65,28 +65,44 @@
 
     <h1>🎀 LAB 4 A! 🎀</h1>
 
-    <section>
-        <h3>🌸 Change Content</h3>
+  <section>
+    <h3>🌸 Change Content</h3>
 
-        <div id="myElement">
-            <p id="welcomeText">Welcome to my website! 💖</p>
-        </div>
+    <div id="myElement">
+        <p id="welcomeText">Welcome to my website! 💖</p>
+    </div>
 
-        <button onclick="toggleText()">
-            Click Me ✨
-        </button>
-    </section>
+    <button onclick="toggleText()">
+        Click Me ✨
+    </button>
+</section>
 
-    <script>    function toggleText() {       
-         let text = document.getElementById("welcomeText");        
-         if (text.innerHTML === "Welcome to my website! 💖") {            
-            text.innerHTML = "Hello there! 💕";       
-         }                
-             else {            
-                text.innerHTML = "Welcome to my website! 💖";      
-                  }  
-                    }
-    </script>
+<script>
+
+    // 🌷 variable to save the status text
+    let isChanged = false;
+
+    // ✨ function to changes the text
+    function toggleText() {
+
+        let text = document.getElementById("welcomeText");
+
+        if (isChanged === false) {
+
+            text.innerHTML = "Hello there! 💕";
+            isChanged = true;
+
+        } 
+        
+        else {
+
+            text.innerHTML = "Welcome to my website! 💖";
+            isChanged = false;
+
+        }
+    }
+
+</script>
 
     <section>
         <h3>🧁 Number Validation</h3>
@@ -106,31 +122,34 @@
 
     <script>
 
-        // Task 1
-        function toggleText() {
+        // Task 1 = Change the text content of the paragraph.
+        function changeText() {
             document.getElementById("welcomeText").innerHTML =
                 "Hello there! 💖✨";
-        }
+    }
 
-        // Task 2
+        // Task 2 = Check if the input is a number and compares it to the value 10
         function checkInput() {
 
             let x = Number(document.getElementById("userInput").value);
-
+        
+        // check if the input is a valid number
             if (isNaN(x)) {
                 alert("❌ Please insert a number!");
             }
-
+        
+        // determine if the number is lower than 10
             else if (x < 10) {
                 alert("🌸 The number is lower than 10!");
             }
 
+        // determine if the number is higher than 10
             else {
                 alert("✨ The number is higher than 10!");
             }
         }
 
-        // Task 3
+        // Task 3 = for loop to generate the required string sequence and display the numbers 
         let text = "";
 
         for (let i = 1; i <= 5; i++) {
